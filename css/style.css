@@ -26,6 +26,7 @@
 
 #menuToggle a:hover {
   color: tomato;
+  cursor: crosshair;
 }
 
 #menuToggle input {
@@ -70,9 +71,6 @@
   background: #232323;
 }
 
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked~span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
@@ -103,4 +101,25 @@
 
 #menuToggle input:checked~ul {
   transform: none;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+  color:#232323;
+}
+
+a:link {
+  text-decoration: none;
+  color:#ededed 
+}
+
+a:visited {
+  text-decoration: none;
+  color:#cdcdcd
 }
