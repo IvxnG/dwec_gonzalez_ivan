@@ -1,125 +1,127 @@
  body {
-  margin: 0;
-  padding: 0;
-  background: #232323;
-  color: #cdcdcd;
-  font-family: "Avenir Next", "Avenir", sans-serif;
-}
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   background: #232323;
+   color: #cdcdcd;
+   font-family: "Verdana", sans-serif;
+ }
 
-#menuToggle {
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
+ #menuToggle {
+   display: block;
+   position: relative;
+   top: 50px;
+   left: 50px;
+   z-index: 1;
+   -webkit-user-select: none;
+   user-select: none;
+ }
 
-  z-index: 1;
+ #menuToggle a {
+   text-decoration: none;
+   color: #232323;
+   transition: color 0.3s ease;
+ }
 
-  -webkit-user-select: none;
-  user-select: none;
-}
+ #menuToggle a:hover {
+   color: tomato;
+   cursor: crosshair;
+ }
 
-#menuToggle a {
-  text-decoration: none;
-  color: #232323;
-  transition: color 0.3s ease;
-}
+ #menuToggle input {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   cursor: pointer;
+   opacity: 0;
+   z-index: 2;
+   -webkit-touch-callout: none;
+ }
 
-#menuToggle a:hover {
-  color: tomato;
-  cursor: crosshair;
-}
+ #menuToggle span {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   background: #cdcdcd;
+   border-radius: 3px;
+   z-index: 1;
+   transform-origin: 4px 0px;
+   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+     opacity 0.55s ease;
+ }
 
-#menuToggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 2;
-  -webkit-touch-callout: none;
-}
+ #menuToggle span:first-child {
+   transform-origin: 0% 0%;
+ }
 
-#menuToggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: #cdcdcd;
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    opacity 0.55s ease;
-}
+ #menuToggle span:nth-last-child(2) {
+   transform-origin: 0% 100%;
+ }
 
-#menuToggle span:first-child {
-  transform-origin: 0% 0%;
-}
+ #menuToggle input:checked~span {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
 
-#menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
-}
+ #menuToggle input:checked~span:nth-last-child(3) {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
 
-#menuToggle input:checked~span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
+ #menuToggle input:checked~span:nth-last-child(2) {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
 
-#menuToggle input:checked~span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
+ #menu {
+   position: absolute;
+   width: 300px;
+   height: 80vh;
+   margin: -100px 0 0 -50px;
+   padding: 50px;
+   padding-top: 125px;
 
-#menuToggle input:checked~span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
-}
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+ }
 
-#menu {
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
+ #menu li {
+   padding: 10px 0;
+   font-size: 22px;
+ }
 
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-}
-#menu li {
-  padding: 10px 0;
-  font-size: 22px;
-}
+ #menuToggle input:checked~ul {
+   transform: none;
+ }
 
-#menuToggle input:checked~ul {
-  transform: none;
-}
+ .footer {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   padding: 1rem;
+   background-color: #efefef;
+   text-align: center;
+   color: #232323;
+ }
 
-.footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
-  color:#232323;
-}
+ a:link {
+   text-decoration: none;
+   color: #ededed
+ }
 
-a:link {
-  text-decoration: none;
-  color:#ededed 
-}
-
-a:visited {
-  text-decoration: none;
-  color:#cdcdcd
-}
+ a:visited {
+   text-decoration: none;
+   color: #cdcdcd
+ }
