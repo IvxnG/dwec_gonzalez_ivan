@@ -15,3 +15,9 @@ if (year <= 1949) {
         alert(`Fecha posterior a 2010.`)
     }
 }
+
+// let msg = n>2010 ? "no vale":
+//           n>1994 ? "z":
+//           n>1981 ? "mlln":
+//           n>1981 ? "mlln":
+//           n>1981 ? "mlln":
