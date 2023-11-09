@@ -2,8 +2,7 @@ let len = Number(prompt("len"));
 let min = prompt("min");
 let max = prompt("max");
 function ascendDescend( len, min, max ){
-    let str = "";
-    str = str.padStart(len, minMax(min, max));
+    let str = "".padStart(len, minMax(min, max));
     return str;
 }
 function minMax(min, max){
