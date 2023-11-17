@@ -9,4 +9,3 @@ li.forEach((element, index) => {
     element.textContent = "";
     element.append(a);
 });
-console.log(links);
