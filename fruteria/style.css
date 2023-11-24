@@ -1,0 +1,145 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #FFCC29;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #206A5D;
+    color: white;
+    font-size: 7em;
+    height: 200px;
+    font-weight: 700;
+}
+
+#main {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#products-section {
+    height: fit-content;
+    width: 70vw;
+    background-color: #FFCC29;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#cart-section {
+    width: 30vw;
+    min-width: 350;
+    background-color: #e7bc2d;
+}
+
+#pages {
+    width: 100%;
+    min-width: 350;
+    background-color: #ac8c26;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    cursor: pointer;
+    
+    
+}
+
+/* Targeta de producto */
+.product {
+    margin: 10px;
+    background-color: rgb(241, 143, 14);
+    padding: 2px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.product-foto {
+    border-radius: 10px;
+    align-self: center;
+}
+
+.fruit-name {
+    border-radius: 5px;
+    background-color: #2e917f;
+    padding: 3px;
+    margin: 2px;
+}
+
+.price {
+    border-radius: 5px;
+    background-color: #8f8d2a;
+    padding: 3px;
+    margin: 2px;
+}
+
+.btn {
+    background-color: rgb(199, 206, 206);
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #b3e7de;
+    margin: 3px;
+    padding: 2px;
+}
+
+
+/* Carrito de compra */
+.cartProducts {
+    display: column;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.cartItem {
+    background-color: rgb(129, 178, 20);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid black 1px;
+}
+
+.item-data{
+    min-width: 130px;
+    margin: 5px;
+}
+.item-center{
+    text-align: center;
+}
+
+.cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.caja {
+    width: 100%;
+    height: 60px;
+    background-color: #f0f0f0;
+    text-align: center;
+    line-height: 50px;
+}
+
+/*Total precio*/
+.totalPrice{
+    min-width: 40px;
+    background-color: #ac8c26;
+    text-align: end;
+    padding: 10px;
+    padding-left: 15px;
+}
