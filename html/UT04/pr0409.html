@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .background{
-            background-color: lightgray;
-            width: 720px;
-            height: 720px;
-        }
+      .table-background {
+        background-color: lightgray;
+        width: 720px;
+        height: 720px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .box {
+        min-width: 80px;
+        height: 80px;
+        text-align: center;
+        /*display: inline-block;*/
+      }
+      .black{
+        cursor: pointer;
+        background-color: black;
+
+      }
+      .white{
+        cursor: pointer;
+        background-color: white;
+      }
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Tablero de Ajedrez</h1>
-    <div id="board"></div>
+    <div id="board" class="parent"></div>
 
     <script src="../../js/UT04/pr0409.js"></script>
-</body>
+  </body>
 </html>
