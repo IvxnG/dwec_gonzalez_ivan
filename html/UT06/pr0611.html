@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de Fechas</title>
+</head>
+<body>
+    <h2>Analizador de Fechas</h2>
+    <label for="texto">Introduce un texto:</label><br>
+    <textarea id="texto" rows="4" cols="50"></textarea><br>
+    <button id="enviar-btn">Enviar</button><br><br>
+    <p id="resultado"></p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const enviarBtn = document.getElementById('enviar-btn');
+            enviarBtn.addEventListener('click', analizarFechas);
+        });
+
+        function analizarFechas() {
+            const texto = document.getElementById('texto').value;
+            const regex = /\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/g;
+            let resultado = texto.replace(regex, function(match, dia, mes, ano) {
+                if (esFechaValida(dia, mes, ano)) {
+                    return `${dia} del ${mes} de ${ano}`;
+                } else {
+                    return match; // Devolver la fecha original si no es válida
+                }
+            });
+
+            document.getElementById('resultado').textContent = resultado;
+        }
+
+        function esFechaValida(dia, mes, ano) {
+            // Convertir a números enteros
+            dia = parseInt(dia, 10);
+            mes = parseInt(mes, 10);
+            ano = parseInt(ano, 10);
+
+            // Crear una nueva fecha
+            const fecha = new Date(ano, mes - 1, dia);
+            // Verificar si los valores coinciden con la fecha creada
+            return dia === fecha.getDate() && mes === fecha.getMonth() + 1 && ano === fecha.getFullYear();
+        }
+    </script>
+</body>
+</html>

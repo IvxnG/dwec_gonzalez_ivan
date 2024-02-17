@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Localidades</title>
+</head>
+<body>
+    <h1>Formulario de Localidades</h1>
+    <form id="location-form">
+        <div>
+            <label for="community">Comunidad Autónoma:</label>
+            <select id="community" name="community">
+                <option value="">Selecciona una comunidad autónoma</option>
+            </select>
+        </div>
+        <div>
+            <label for="province">Provincia:</label>
+            <select id="province" name="province" disabled>
+                <option value="">Selecciona una provincia</option>
+            </select>
+        </div>
+        <div>
+            <label for="city">Localidad:</label>
+            <select id="city" name="city" disabled>
+                <option value="">Selecciona una localidad</option>
+            </select>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="../../js/UT06/pr0608.js"></script>
+</body>
+</html>
